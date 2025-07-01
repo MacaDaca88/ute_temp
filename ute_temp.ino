@@ -25,7 +25,7 @@ U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, U8X8_PIN_NONE);  // or specify
 #include "led.h"
 
 void setup() {
-  ledStart();
+
   // Connect to wifi
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
@@ -63,6 +63,7 @@ void setup() {
   u8g2.sendBuffer();
   u8g2.print(".");
   u8g2.sendBuffer();
+    ledStart();
 }
 
 void loop() {
